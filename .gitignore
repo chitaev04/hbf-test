@@ -1,0 +1,13 @@
+/bin
+/vendor
+/vendor.pb
+/vendor.protogen
+.DS_STORE
+.DS_Store
+/.idea
+/.vscode
+.idea/
+
+/.o3/k8s/values_local.yaml
+allure-results*
+o3_plugin_platform.yaml

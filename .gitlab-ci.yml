@@ -1,0 +1,162 @@
+include:
+  - project: marketplace/qa/tools/go_infrastructure
+    file: .go-qa.container.local.yml
+  - project: platform/kct
+    file: common-pipeline-apply.yml
+  - project: pub/ci
+    ref: 0.0.6
+    file: .go-lint.gitlab-ci.yml
+
+    # almm team
+  - local: /tests/projects/sc_almm_team/aut-not-enough-info-ugc/.gitlab-ci.aut-not-enough-info-ugc.yml
+  - local: /tests/projects/sc_almm_team/aut-obscene-text-validation/.gitlab-ci.aut-obscene-text-validation.yml
+  - local: /tests/projects/sc_almm_team/aut-trash-dictionary/.gitlab-ci.aut-trash-dictionary.yml
+  - local: /tests/projects/sc_almm_team/aut-qr-code-model/.gitlab-ci.aut-qr-code-model.yml
+  - local: /tests/projects/sc_almm_team/aut-slander-model/.gitlab-ci.aut-slander-model.yml
+
+    # automoderation team
+  - local: /tests/projects/sc_automoderation_team/aut-super-resolution/.gitlab-ci.aut-super-resolution.yml
+  - local: /tests/projects/sc_automoderation_team/aut-brands-routing/.gitlab-ci.aut-brands-routing.yml
+  - local: /tests/projects/sc_automoderation_team/photo-ocr-validation/.gitlab-ci.photo-ocr-validation.yml
+  - local: /tests/projects/sc_automoderation_team/aut-ocr-validations/.gitlab-ci.aut-ocr-validations.yml
+  - local: /tests/projects/sc_automoderation_team/aut-virtual-try-on/.gitlab-ci.aut-virtual-try-on.yml
+  - local: /tests/projects/sc_automoderation_team/adult-content-detector/.gitlab-ci.adult-content-detector.yml
+  - local: /tests/projects/sc_automoderation_team/blur-detector/.gitlab-ci.blur-detector.yml
+  - local: /tests/projects/sc_automoderation_team/aut-chats-routing/.gitlab-ci.aut-chats-routing.yml
+  - local: /tests/projects/sc_automoderation_team/aut-update-ml-routing/.gitlab-ci.aut-update-ml-routing.yml
+  - local: /tests/projects/sc_automoderation_team/aut-human-detection-model/.gitlab-ci.aut-human-detection-model.yml
+  - local: /tests/projects/sc_automoderation_team/aut-erotic-content-detector/.gitlab-ci.aut-erotic-content-detector.yml
+
+    # AUF team
+  - local: /tests/projects/auf_team/aut-photo-name-mismatch/.gitlab-ci.aut-photo-name-mismatch.yml
+  - local: /tests/projects/auf_team/aut-ocr-stopwords/ci/.gitlab-ci.aut-ocr-stopwords.yml
+  - local: /tests/projects/auf_team/aut-review-not-about-good/.gitlab-ci.review-delivery.yml
+  - local: /tests/projects/auf_team/nonsense-text-validation/.gitlab-ci.nonsense-text-validation.yml
+  - local: /tests/projects/auf_team/nonsense-text-validation/.gitlab-ci.nonsense-text-validation.yml
+  - local: /tests/projects/auf_team/aut-size-chart-detector/.gitlab-ci.aut-size-chart-detector.yml
+  - local: /tests/projects/auf_team/aut-sellers-routing/.gitlab-ci.aut-sellers-routing.yml
+  - local: /tests/projects/auf_team/aut-ocr-vocabularies/.gitlab-ci.aut-ocr-vocabularies.yml
+  - local: /tests/projects/auf_team/dimensional-weight-validation/.gitlab-ci.dimensional-weight-validation.yml
+  - local: /tests/projects/auf_team/aut-sellers-creation-model/.gitlab-ci.aut-sellers-creation-model.yml
+  - local: /tests/projects/auf_team/uzbek-translation-service/.gitlab-ci.uzbek-translation-service.yml
+  - local: /tests/projects/auf_team/aut-mismatch-library/ci/.gitlab-ci.aut-mismatch-library.yml
+  - local: /tests/projects/auf_team/aut-cat2-model/.gitlab-ci.aut-cat2-model.yml
+  - local: /tests/projects/auf_team/aut-infographic-detector/.gitlab-ci.aut-infographic-detector.yml
+
+
+  # sc_ml_platform_team
+  - local: /tests/projects/sc_ml_platform_team/aut-admin/.gitlab-ci.aut-admin.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-antifraud-routing/.gitlab-ci.aut-antifraud-routing.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-ugc-routing/.gitlab-ci.aut-ugc-routing.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-ml-orchestrator/.gitlab-ci.aut-ml-orchestrator.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-automoderation-meta/.gitlab-ci.aut-automoderation-meta.yml
+  - local: /tests/projects/sc_ml_platform_team/moderation-ml-routing/.gitlab-ci.moderation-ml-routing.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-social-profile-routing/.gitlab-ci.aut-social-profile-routing.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-rich-content-routing/.gitlab-ci.aut-rich-content-routing.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-routing-customization/.gitlab-ci.aut-routing-customization.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-category-customization/.gitlab-ci.aut-category-customization.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-external-routing/.gitlab-ci.aut-external-routing.yml
+  - local: /tests/projects/sc_ml_platform_team/moderation-ml/.gitlab-ci.moderation-ml.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-image-processor/.gitlab-ci.aut-image-processor.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-external-async-manager/.gitlab-ci.aut-external-async-manager.yml
+  - local: /tests/projects/sc_ml_platform_team/aut-moderation-manager/.gitlab-ci.aut-moderation-manager.yml
+
+  # MOMO team
+  - local: /tests/projects/sc_momo_ai_team/aut-general-complaints-model/.gitlab-ci.aut-general-complaints-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-military-model/.gitlab-ci.aut-military-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-naked-kids-model/.gitlab-ci.aut-naked-kids-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-erotic-model/.gitlab-ci.aut-erotic-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-hatespeech-model/.gitlab-ci.aut-hatespeech-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-nsfw-model/.gitlab-ci.aut-nsfw-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-photo-type-mismatch/.gitlab-ci.aut-photo-type-mismatch.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-speech-to-text/.gitlab-ci.aut-speech-to-text.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-text-to-speech/.gitlab-ci.aut-text-to-speech-model.yml
+  - local: /tests/projects/sc_momo_ai_team/aut-video-cropper/.gitlab-ci.aut-video-cropper.yml
+  - local: /tests/projects/sc_momo_ai_team/momo-dictionaries/.gitlab-ci.momo-dictionaries.yml
+  #MLCQ team
+
+  - local: /tests/projects/mlcq_team/mlcq-routing/.gitlab-ci.mlcq-routing.yml
+  - local: /tests/projects/mlcq_team/aut-mlcq-lgbt-model/.gitlab-ci.aut-mlcq-lgbt-model.yml
+  - local: /tests/projects/mlcq_team/aut-mlcq-counterfeit-small/.gitlab-ci.aut-mlcq-counterfeit-small.yml
+  - local: /tests/projects/mlcq_team/aut-mlcq-markup-uploader/.gitlab-ci.aut-mlcq-markup-uploader.yml
+  - local: /tests/projects/mlcq_team/aut-embedding-charybdis/.gitlab-ci.aut-embedding-charybdis.yml
+  - local: /tests/projects/mlcq_team/aut-mlcq-counterfeit-big/.gitlab-ci.aut-mlcq-counterfeit-big.yml
+  - local: /tests/projects/mlcq_team/mlcq-manager/.gitlab-ci.mlcq-manager.yml
+  - local: /tests/projects/mlcq_team/aut-mlcq-select-model/.gitlab-ci.aut-mlcq-select-model.yml
+  #sc_mdmt_team
+
+  - local: /tests/projects/sc_mdmt_team/mdmt-translation-service-mil/.gitlab-ci.mdmt-translation-service-mil.yml
+  - local: /tests/projects/sc_mdmt_team/mdmt-translate-checkers/.gitlab-ci.mdmt-translate-checkers.yml
+  - local: /tests/projects/sc_mdmt_team/mdmt-translation-metrics/gitlab-ci.mdmt-translation-metrics.yml
+  #sc_mcap_team
+
+  - local: /tests/projects/sc_mcap_team/aut-wrong-photo-ugc/.gitlab-ci.aut-wrong-photo-ugc.yml
+  - local: /tests/projects/sc_mcap_team/aut-tobacco-model/.gitlab-ci.aut-tobacco-model.yml
+  - local: /tests/projects/sc_mcap_team/aut-death-model/.gitlab-ci.aut-death-model.yml
+  - local: /tests/projects/sc_mcap_team/aut-weapon-model/.gitlab-ci.aut-weapon-model.yml
+  - local: /tests/projects/sc_mcap_team/aut-question-approval-ugc/.gitlab-ci.aut-question-approval-ugc.yml
+  - local: /tests/projects/sc_mcap_team/aut-video-cover/.gitlab-ci.aut-video-cover.yml
+  - local: /tests/projects/sc_mcap_team/aut-alcohol-model/.gitlab-ci.aut-alcohol-model.yml
+  - local: /tests/projects/sc_mcap_team/aut-seller-score/.gitlab-ci.aut-seller-score.yml
+  - local: /tests/projects/sc_mcap_team/aut-summary-service/.gitlab-ci.aut-summary-service.yml
+  - local: /tests/projects/sc_mcap_team/aut-swastika-model/.gitlab-ci.aut-swastika-model.yml
+  - local: /tests/projects/sc_mcap_team/aut-ugc-author-score/.gitlab-ci.aut-ugc-author-score.yml
+  - local: /tests/projects/sc_mcap_team/aut-photocontrol-fresh/.gitlab-ci.aut-photocontrol-fresh.yml
+  - local: /tests/projects/sc_mcap_team/aut-photoeditor-routing/.gitlab-ci.aut-photoeditor-routing.yml
+
+  # MOD_GEN team
+  - local: /tests/projects/mod_gen_team/aut-advertisement-model/.gitlab-ci.aut-advertisement-model.yml
+  - local: /tests/projects/mod_gen_team/aut-approving-model/.gitlab-ci.aut-approving-model.yml
+  - local: /tests/projects/mod_gen_team/aut-answer-review/.gitlab-ci.aut-answer-review.yml
+  - local: /tests/projects/mod_gen_team/aut-approving-ugc/.gitlab-ci.aut-approving-ugc.yml
+  - local: /tests/projects/mod_gen_team/aut-blacklist-model/.gitlab-ci.aut-blacklist-model.yml
+  - local: /tests/projects/mod_gen_team/aut-brands-creation-model/.gitlab-ci.aut-brands-creation-model.yml
+  - local: /tests/projects/mod_gen_team/aut-cat2-validation/.gitlab-ci.aut-cat2-validation.yml
+  - local: /tests/projects/mod_gen_team/aut-comment-approval-ugc/.gitlab-ci.aut-comment-approval-ugc.yml
+  - local: /tests/projects/mod_gen_team/aut-complaints-model/.gitlab-ci.aut-complaints-model.yml
+  - local: /tests/projects/mod_gen_team/aut-counterfeit-model/.gitlab-ci.aut-counterfeit-model.yml
+  - local: /tests/projects/mod_gen_team/aut-encoders-provider-cat/.gitlab-ci.aut-encoders-provider-cat.yml
+  - local: /tests/projects/mod_gen_team/aut-flammable-model/.gitlab-ci.aut-flammable-model.yml
+  - local: /tests/projects/mod_gen_team/aut-fraud-fresh/.gitlab-ci.aut-fraud-fresh.yml
+  - local: /tests/projects/mod_gen_team/aut-generate-answers/.gitlab-ci.aut-generate-answers.yml
+  - local: /tests/projects/mod_gen_team/aut-generate-description/.gitlab-ci.aut-generate-description.yml
+  - local: /tests/projects/mod_gen_team/aut-image-excluder/.gitlab-ci.aut-image-excluder.yml
+  - local: /tests/projects/mod_gen_team/aut-incitement-model/.gitlab-ci.aut-incitement-model.yml
+  - local: /tests/projects/mod_gen_team/aut-incorrect-stars-ugc/.gitlab-ci.aut-incorrect-stars-ugc.yml
+  - local: /tests/projects/mod_gen_team/aut-name-templater/.gitlab-ci.aut-name-templater.yml
+  - local: /tests/projects/mod_gen_team/aut-new-card-validation/.gitlab-ci.aut-new-card-validation.yml
+  - local: /tests/projects/mod_gen_team/aut-not-an-answer-model/.gitlab-ci.aut-not-an-answer-model.yml
+  - local: /tests/projects/mod_gen_team/aut-not-a-question-model/.gitlab-ci.aut-not-a-question-model.yml
+
+
+variables:
+  GO_VERSION: "1.24"
+  LINT_IMAGE: ${BASE_IMAGE_REPO}/platform/lint/$LINT_VERSION/opencv-go:v0.10
+  DOCKERFILE_PATH: .o3/build/1.24/Dockerfile
+  ALLURE_PROJECT_ID: 403
+  SERVICE_NAME: automoderation-tests
+  ITC_ID: 20351
+  GRPC_URL: o3:///${CI_PROJECT_NAME}:grpc?version=${CI_COMMIT_REF_SLUG}
+  WARDEN_HOST_PORT: dns:///warden.platform.stg.s.o3.ru:82
+  PRINT_FULL_REPORT: "false"
+  QA_S2S_AUTO: "true"
+  QA_S2S_VAULT_PATH: o-secret/stg/content/md/ml/platform/automoderation-tests/secret_for_tests
+
+stages:
+  - pre-deploy
+  - build
+  - mod_gen_team
+  - sc_almm_team
+  - sc_automoderation_team
+  - sc_auf_team
+  - sc_momo_ai_team
+  - sc_mlcq_team
+  - sc_mcap_team
+  - sc_mdmt_team
+  - sc_ml_platform_team
+  - e2e_cache
+
+build image:
+  stage: build
+  timeout: 40min
+  extends: .build-1.24
