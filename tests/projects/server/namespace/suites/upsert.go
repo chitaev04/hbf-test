@@ -94,7 +94,7 @@ func (s *GRPCSuiteUpsertNS) TestUpsertErrorDuplicateNameWithoutUID(t provider.T)
 		_, err := s.TestStruct.FoundationTestsUpsert(bodies.UpsertErrorDuplicateNameWithoutUID())
 
 		sCtx.NewStep(steps.AssertStep)
-		utils.AssertGRPCError(sCtx, err, codes.AlreadyExists, "for insert pass unique name")
+		utils.AssertGRPCError(sCtx, err, codes.FailedPrecondition, "for insert pass unique name")
 	})
 }
 
@@ -314,7 +314,7 @@ func (s *GRPCSuiteUpsertNS) TestUpsertErrorEditNonExistentUID(t provider.T) {
 		_, err := s.TestStruct.FoundationTestsUpsert(bodies.UpsertErrorEditNonExistentUID())
 
 		sCtx.NewStep(steps.AssertStep)
-		utils.AssertGRPCError(sCtx, err, codes.AlreadyExists, "for update you must pass existing uid AND matching name")
+		utils.AssertGRPCError(sCtx, err, codes.FailedPrecondition, "for update you must pass existing uid AND matching name")
 	})
 }
 
